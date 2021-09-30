@@ -1,0 +1,17 @@
+.input {
+  background: var(--content-bg);
+  outline: 0;
+  border: 0;
+  width: 100%;
+  padding: 16px;
+  margin: 15px 0;
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 0.8rem;
+}
+
+.input::placeholder {
+  color: var(--icons);
+  font-size: 0.8rem;
+  font-family: "IRANSans";
+}
