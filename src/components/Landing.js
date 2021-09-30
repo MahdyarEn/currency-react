@@ -3,8 +3,13 @@ import React, { useState, useEffect } from "react";
 import { getCurrency } from "../services/api";
 // styles
 import styles from "./Landing.module.css";
+// components
+import Message from "./Message";
+import Currency from "./Currency";
+
 const Landing = () => {
-  const [coin, setCoin] = useState([]);
+  const [search, setSearch] = useState("");
+  const [coin, setCoin] = useState({ currency: [] });
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -14,10 +19,42 @@ const Landing = () => {
     fetchApi();
   }, []);
 
+  const searchHandler = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const searchCurrency = coin.currency.filter((item) => item.name.includes(search));
+
   return (
     <>
-      <input type="text" className={`${styles.input} shadow`} placeholder="برای جستجو بین ارز ها، نام ارز را وارد کنید"/>
-      <div>{coin.currency ? coin.currency.map((currency) => <p key={currency.id}>{currency.name}</p>) : <h3>sdhfg</h3>}</div>
+      {coin.currency.length ? <input value={search} onChange={searchHandler} type="text" className={`${styles.input} shadow`} placeholder="برای جستجو بین ارز ها، نام ارز را وارد کنید" /> : undefined}
+      {coin.currency.length ? (
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>عنوان ارز</th>
+
+              <th>قیمت</th>
+
+              <th>میزان تغییر</th>
+
+              <th>کمترین مقدار</th>
+
+              <th>پیشترین مقدار</th>
+              <th>زمان</th>
+            </tr>
+          </thead>
+          <tbody>
+            {searchCurrency.map((currency) => (
+              <Currency key={currency.id} name={currency.name} price={currency.price} change={currency.change} changeRate={currency.changeRate} least={currency.least} highest={currency.highest} time={currency.time}>
+                {currency.name}
+              </Currency>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <Message text="درحال دریافت اطلاعات از سرور..." />
+      )}
     </>
   );
 };

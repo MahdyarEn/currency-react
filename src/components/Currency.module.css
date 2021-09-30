@@ -1,0 +1,7 @@
+.increase {
+  color: var(--green);
+}
+
+.decrease {
+  color: var(--red);
+}
