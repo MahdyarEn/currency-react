@@ -2,6 +2,8 @@
 
 این پروژه با [ریکت](https://github.com/facebook/create-react-app) نوشته شده است و برای ران کردن آن ابتدا آن را باید نصب کنید .
 
+- [نمونه](https://mahdyaren.github.io/currency-react/)
+
 ```
 npm install -g create-react-app
 ```
