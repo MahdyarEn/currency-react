@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/currency-react/static/css/main.fc761053.chunk.css",
+    "main.js": "/currency-react/static/js/main.8f80b9cd.chunk.js",
+    "main.js.map": "/currency-react/static/js/main.8f80b9cd.chunk.js.map",
+    "runtime-main.js": "/currency-react/static/js/runtime-main.c58e4dcf.js",
+    "runtime-main.js.map": "/currency-react/static/js/runtime-main.c58e4dcf.js.map",
+    "static/js/2.66262314.chunk.js": "/currency-react/static/js/2.66262314.chunk.js",
+    "static/js/2.66262314.chunk.js.map": "/currency-react/static/js/2.66262314.chunk.js.map",
+    "index.html": "/currency-react/index.html",
+    "static/css/main.fc761053.chunk.css.map": "/currency-react/static/css/main.fc761053.chunk.css.map",
+    "static/js/2.66262314.chunk.js.LICENSE.txt": "/currency-react/static/js/2.66262314.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/currency-react/static/media/Lalezar.2d6b1249.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c58e4dcf.js",
+    "static/js/2.66262314.chunk.js",
+    "static/css/main.fc761053.chunk.css",
+    "static/js/main.8f80b9cd.chunk.js"
+  ]
+}
